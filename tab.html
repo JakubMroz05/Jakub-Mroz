@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .tablicanazw{
+            color: blueviolet;
+            padding-left: 10px;
+        }
+        .tablica{
+            color:#0000ff;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tablicanazw" >Tablice</h1>
+    <button>Kliknij, aby ujrzec tablice 50 elementowa</button>
+    <div class="tablica">wynik</div>
+    <div class="ile"></div>
+    <script>
+    const btn = document.querySelector('button');
+    const divTablica = document.querySelector('div.tablica');
+  const divIle = document.querySelector('div.ile'); 
+    const liczby = [];
+    const ileRazy = function (tab, liczba){
+        let ile = 0;
+        tab.forEach((liczbaWTablicy) => {
+            if (liczbaWTablicy == liczba) ile++;
+        });
+        return ile;
+    }
+    btn.addEventListener('click' , function() {
+       
+        for(let i = 0; i <=50; i++) {
+            liczby[i] = Math.round(Math.random() *100); 
+        }
+        divTablica.textContent = liczby.join(', ');
+
+         divIle.textContent = `Liczba 0 w tablicy wystepuje : ${ileRazy(liczby, 0)} razy`;
+    });
+    </script>
+</body>
+</html>
