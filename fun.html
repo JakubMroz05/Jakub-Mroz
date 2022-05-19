@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div + div{
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" name="liczba1" placeholder="podaj liczbe 1:">
+        <input type="number" name="liczba2" placeholder="podaj liczbe 2:">
+    </div>    
+    <div>
+        <button>Suma</button>
+        <button>Różnica</button>
+        <button>Iloczyn</button>
+        <button>Iloraz</button>
+    </div>
+    <div>
+        Wynik 
+    </div>
+    <script>
+        const btns = document.querySelectorAll('button');
+        const divResults = document.querySelector('div+div+div') 
+       const input1 = document.querySelector("input[name='liczba1']");
+       const input2 = document.querySelector("input[name='liczba2']");
+        
+        function suma(l1, l2){
+            return l1+l2;
+        };
+        const odejmowanie = function(l1, l2){
+            return l1-l2;
+        };
+        const mnozenie = (l1, l2) => {
+            return l1*l2;
+        };
+        const dzielenie = (l1, l2) =>{
+            return l1 / l2;
+        };
+
+        btns[0].addEventListener('click',()=>{
+        const liczba1 = input1.value *1; 
+        const liczba2 = input2.value *1;
+        divResults.textContent = 'Suma liczb wynosi '+ suma (liczba1, liczba2);
+        });
+        btns[1].addEventListener('click', function() {
+        const liczba1 = input1.value; 
+        const liczba2 = input2.value;
+        divResults.textContent = 'Różnica liczb wynosi '+ odejmowanie (liczba1, liczba2);
+        });
+        btns[2].addEventListener('click', function() {
+        const liczba1 = input1.value; 
+        const liczba2 = input2.value;
+        divResults.textContent = 'Iloczyn liczb wynosi '+ mnozenie (liczba1, liczba2);
+        });
+        btns[3].addEventListener('click', function() {
+        const liczba1 = input1.value; 
+        const liczba2 = input2.value;
+        divResults.textContent = 'Iloraz liczb wynosi '+ dzielenie (liczba1, liczba2);
+       
+        if(0==liczba1){
+            document.write("Nie dzielimy przez zero")
+        }
+        else if(liczba2==0){
+            document.write("Nie dzielimy przez zero")
+        }
+        });
+    </script>
+    
+</body>
+</html>
