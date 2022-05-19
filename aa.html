@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>aa</title>
 </head>
 <body>
-    <input type="text" name="zdanie" placeholder="wpisz zdanie">
-    <button>Sprawdź</button>
+    <input type="text" name="zdanie" placeholder="Wpisz zdanie"/>
+    <button>Sprawdz</button>
     <div></div>
     <script>
         const input = document.querySelector('input[name="zdanie"]');
         const btn = document.querySelector('button');
         const div = document.querySelector('div');
-        const zamien = function(){
-            const zdanie = input.value;
-            const wyrazy = zdanie.split(' ');
-            let i = 0;
-            wyrazy.forEach((wyraz) => {
-                wyraz.charAt(0).toUpperCase();
-                wyraz = wyraz.replace(wyraz.charAt(0), wyraz.charAt
-                (0).toUpperCase());
-                wyrazy[i] = wyraz;
-                i++;
-            });
-            div.textContent = wyrazy.join(' ');
-        };
+        const zamien = function () {
+        const zdanie = input.value; 
+        const wyrazy = zdanie.split(' ');
+        for (let i = 0; i < wyrazy.length; i++ ) {
+            wyrazy[i] = wyrazy[i].replace( wyrazy[i].charAt(0),
+            wyrazy[i].charAt(0).toUpperCase());
+        }
+        div.textContent = wyrazy.join(' ');
+    };
         btn.addEventListener('click', zamien);
     </script>
 </body>
