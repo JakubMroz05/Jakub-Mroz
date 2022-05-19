@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+</head>
+<body>
+    <script>
+        /* const tab = [1, 'a', {}]
+        const color = ['red', 'blue', 'orange', 'yellow', 'green'];
+        console.log(colors); */
+
+        /*PUSH - DODAJE ELEMENT NA KONCU TAB
+            colors.push('black');
+            console.lod(colors);
+            */
+
+        /*UNSHIFT - DODAJE ELEMENT NA POCZATKU TAB
+            colors.unshift('white');
+            console.log(colors);
+            */
+
+        //POP - USUWA OSTATNI ELEMENT TAB
+            //colors.pop();
+            //console.log(colors);
+            //delate colors[4]; 
+            //console.log(colors);
+            //colors.push('black');
+            //console.log(colors);
+
+        //SHIFT - USUWA PIERWSZY ELEMENT TAB
+        //Usuniecie wartosci i indeksu (nie tylko wartosci)
+            //colors.shift();
+            //console.log(colors);
+            //delate colors[0]  
+
+        //METODA CONCAT - LACZENIE TAB
+            //const even = [2, 4, 6, 8];
+            //const odd = [1, 3, 5, 7, 9];
+            //const number = even.concat(odd);
+            //console.log(number);
+
+        //METODA SLICE  -  bezinwazyjna, czyli nie wplywa na tablice oryginalna
+        //Zwraca nowa tablice, ktora sklada sie z czesci tablicy na ktorej jest wykonana. Jezeli damy tylko jeden argument, to
+        //bedzie zwracala od tego elementu (od tego indexu) do konca 
+            //console.log(items.slice(3, 5));
+            //console.log(items);
+                    //drugi element mowi, do ktorego elementu (index), ale bez tego elementu
+            //console.log(items.slice(1, 4));
+                    //a tak jak ponizej mozemy pobrac cala tablice
+            //items.slice(0, items.length);
+                    //lub
+            //const newItems = items.slice(0);
+
+        //Jesli uzywamy minusa to mowimy ile od konca mamy zwrocic
+
+
+        //METODA SPLICE - destrukcyjna, czyli modyfikuje oryginalna tablice
+        //Przyklad metody dstrukcyjnej ()destructive method, mutating method - zmieniaja tablice na ktorej sa wywolywane)
+        //Ta metoda zmienia tablice (modyfikuje) na ktorej jest wykonywana
+            //const animals = ['dog', 'cat', 'canary', 'mouse'];
+            //console.log(animals);
+            //console.log(animals.splice(1, 2));  //od indeksu pierwszego (czyli 2 element) usun 2 elementy.
+            //console.log(animals);
+            //animals.splice(2);  //usunie wszystkie elementy od index 2, laczenia z nim element (usunie index-y, a wiec zmniejszy dlugosc tablicy)
+            //console.log(animals);
+            //animals.splice(0);  //wyzeruje cala tablice
+
+        //Metoda splice umozliwia nam tez zastepienia usunietych elementow
+            //animals.splice(2, 1, 'hamster');
+            //console.log(animals);
+            //animals.splice(0, 2, 'fishes');
+            //console.log(animals);
+
+        //Umozliwia nam tez dodawanie nowych elementow
+            //animals.splice(2, 0, "rat");
+            //animals.splice(0, 0, "horse", "pig", "donkey");
+            //console.log(animals);
+        
+        //BARDZO WAZNE!!! Metoda splice nie tylko wykonuje operacje na tablicy (zmienia ja), ale tez zwraca wartosci, ktore usuwa w
+        //formie tablicy. Wiec to co usuniemy mozemy wykorzystac.
+            //const pets = animals.splice(0, 3);
+        
+        
+        //METODA SORT - METODA DESTRUKCYJNA
+            //animals.sort();
+            //console.log(animals);
+
+        //METODA REVERSE - METODA DESTRUKCYJNA - ODWRACA KOLEJNOSC
+            //items.reverse();
+            //["a", 3, "z", "koniec"].reverse();
+
+        //METODA INDEXOF - szuka takiego elementu w tablicy, jesli znajdzie zwraca index tego elementu, jesli nie zwraca -1;
+            //animals.indexof('canary');
+            //console.log(['Arek', 22, null, 22].indexof(22));
+            //console.log(['Arek', 22, null, 22]lastIndexOf(22));
+            //["Arek", 22, null, 22].indexof("Are"); //-1
+            
+
+        //METODA JOIN
+        //Tworzy stringa z elementow , domyslnie oddzielonych przecinkiem. Mozemy to jednak zmienic.
+            //console.log(items.join());  //string odzielony przecoinkiem
+            //console.log(animals.join());
+                    //w "przyjaznym" panstwie mozna z automantu dodac bonusy
+            //console.log(items.join(' - 10 lat w obozie pracy; \n '));
+
+        //METODA SPLIT - mozna wykonac na string, tworzy tablice 
+            //const letters = 'Marek Adam Justyna Teresa'.split(' ');
+            //const.log(letters);
+
+            //"Marek Adam Justyna Teresa".split(' ');
+            //"Gdansk, Elblag, Gdynia, Sopot".split(',',3);
+            //"Gdansk, Elblag, Gdynia, Sopot(', ',3);
+
+            //const datesOfBirth = "1967,1982, 1990, 1998, 1976" 
+            //datesOfBirth.split(',')
