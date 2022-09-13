@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zmiana{
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Przykłady z modelu DOM</h1>
+    <div class="sekcja">
+        <h2 id="tytul">Tytuł akapitu</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, omnis commodi! Impedit repellat esse dolores hic asperiores modi nulla, libero odit veniam fuga eum eveniet corporis provident porro aliquam iste?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam blanditiis autem consectetur voluptas quibusdam odio, dolores adipisci voluptatibus obcaecati ad doloremque sequi optio a in quidem culpa delectus dolore repellendus?</p>
+    </div>
+    <script>
+        const naglowekGlowny = document.querySelector('h1');
+        const elementDiv = document.querySelector('.sekcja');
+        const naglowekPoboczny = document.querySelector('#tytul');
+        const akapity = document.querySelectorAll('P'); 
+        //akapity[0].innerHTML = '<b>Nowa treść akapitu</b>';
+        //akapity[0].textContent = '<b>Nowa treść akapitu</b>';
+        akapity[0].textContent = ' eniam blanditiis autem consectetur voluptas quibusdam odio ';
+        const obrazek = document.querySelector('img');
+        naglowekGlowny.style.color = 'orange';
+        naglowekGlowny.style.fontFamily = 'Arial';
+        akapity[0].classList.add('zmiana');
+        akapity[1].classList.add('zmiana');
+        akapity.forEach(akapity =>{
+            akapit.classList.add('zmiana');
+        });
+    </script>
+</body>
+</html>
