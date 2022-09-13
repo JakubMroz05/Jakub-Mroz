@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pierwszy{
+            background-color: papayawhip;
+            color: aquamarine;
+            font-size: x-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 50px;
+        }
+        #drugi{
+            background-color: skyblue;
+            color: darkcyan;
+            font-size: xx-large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Naglowek</h1>
+    <div>
+        <p class="pierwszy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptates, eos ipsum totam aut quia voluptatem repudiandae, deserunt dolorem animi distinctio molestias, quaerat in. A facere suscipit minus! Earum, id.</p>
+        <p id="drugi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia animi hic, natus ducimus sunt numquam adipisci. Quos est distinctio minus temporibus quas provident culpa dolore, debitis rerum animi enim aliquid?</p>
+    </div>
+    <script>
+        const akapity = document.querySelectorAll('P'); 
+        const naglowek = document.querySelector('h1');
+        akapity[0].innerHTML = 'Bardzo lubię się uczyć!';
+        naglowek.innerHTML = 'JavaScript';
+        akapity[1].innerHTML = 'Aplikacje internetowe';
+        naglowek.remove();
+    </script>
+</body>
+</html>
