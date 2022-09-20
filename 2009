@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            padding:  100px;
+            background-color: red;
+            margin-right: 1000px;
+        }
+        .blue{
+            padding: 100px;
+            background-color: blue;
+            margin-right: 1000px;
+        }
+        button{
+            margin-top: 20px;
+            font-size: 2rem;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <button>kliknij mnie</button>
+    <script>
+        const divRed = document.querySelector('.red');
+        const divBlue = document.querySelector('.blue');
+        const btn = document.querySelector('button');
+
+        divRed.addEventListener('click', function () {
+            divRed.style.background = 'pink';
+        });
+
+        btn.addEventListener('mouseover', ()=>{
+            btn.style.transform = 'translateX(200px)';
+        });
+
+        btn.addEventListener('click', () => {
+            divBlue.remove();
+        });
+    </script>
+</body>
+</html>
