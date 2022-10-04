@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post">
+      <div>
+        <input type="text" name="login" placeholder="wpisz login" />
+        <div class="error"></div>
+      </div>
+      <div>
+        <input type="password" name="haslo" placeholder="wpisz hasło" />
+        <div class="error"></div>
+      </div>
+      <div>
+        <input type="submit" value="Zaloguj się" />
+      </div>
+    </form>
+    <div class="answer"></div>
+
+    <script>
+      //pobieramy elementy html
+      const formularz = document.querySelector('form');
+      const poleLogin = document.querySelector('input[name="login"]');
+      const poleHaslo = document.querySelector('input[name="haslo"]');
+      const divErrors = document.querySelectorAll('.error');
+      const divAnswer = document.querySelector('.answer');
+
+      //walidacja ok
+      let walidacja = true;
+
+      //tworzymy funkcje zabezpieczające, które użyjemy w trakcie przetwarzania formularza
+      const walidacjaLoginu = function (login) {
+        const wzorLoginu = /^[a-zA-Z0-9]{3,}$/;
+
+        if (login == '') {
+          walidacja = false;
+          return 'Uzupełnij pole login';
+        }
+        if (!wzorLoginu.test(login)) {
+          walidacja = false;
+          return 'Login musi składać się z conajmniej 3 znaków (litery i cyfry)';
+        }
+        walidacja = true;
+      };
+
+      const walidacjaHasla = function (haslo) {
+        if (haslo.length < 8) {
+          walidacja = false;
+          return 'Hasło musi mieć przynajmniej 8 znaków';
+        }
+        walidacja = true;
+      };
+
+      //obsługa formularza
+      formularz.addEventListener('submit', (e) => {
+        e.preventDefault();
+        divErrors[0].textContent = walidacjaLoginu(poleLogin.value);
+        divErrors[1].textContent = walidacjaHasla(poleHaslo.value);
+
+        //zalogowano
+        if (walidacja == true) {
+          divAnswer.innerHTML = '<h3>Zalogowano</h3>';
+        }
+      });
+    </script>
+  </body>
+</html>
