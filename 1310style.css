@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*style beda mialy zast dla duzych ekranow np. od 1100px */
+body{background-color: rgb(156, 123, 99);
+}
+h1{
+    font-size: 4rem;
+    background-color: black;
+    color: white;
+    padding: 30px 20px;
+}
+p{
+    color: rgb(4, 70, 70);
+    font-size: 3rem;
+    padding: 80px;
+}
+@media(max-width: 1099px){
+    h1{
+        font-size: 3.5rem;
+        background-color: aquamarine;
+        color: gold;
+        text-align: center;
+    }
+    p{
+        font-size: 2rem;
+        padding: 40px;
+    }
+}
+/*style beda mialy zast dla ekranow mniejszych niz  np. od 600px */
+@media(max-width: 599px){
+    h1{
+        font-size: 2.5rem;
+        background-color: lightblue;
+        text-align: center;
+    }
+    p{
+        font-size: 1.5rem;
+        padding: 50px;
+        color: darkgreen;
+    }
+}
