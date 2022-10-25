@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .form{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form action="" method="post">
+            <input type="text" placeholder="Login">
+            <input type="text" placeholder="Hasło">
+        </form>
+    </div>
+     <button class="btn-form">Formularz</button>
+    <script>
+        $('button.btn-form').click(function(){
+           $('div.form').slideToggle(400);
+        });
+    </script>
+</body>
+</html>
