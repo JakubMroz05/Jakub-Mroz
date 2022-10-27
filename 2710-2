@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 300px;
+            padding-top: 300px;
+        }
+        div.sciana{
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background-color: burlywood;
+        }
+        div.okno1{
+            position: absolute;
+            top: 50%;
+            left: 22%;
+            background-color: black;
+            height: 75px;
+            width: 75px;
+        }
+        div.okno2{
+            position: absolute;
+            top: 50%;
+            left: 37%;
+            background-color: black;
+            height: 75px;
+            width: 75px;
+        }
+        div.drzwi{
+            position: absolute;
+            bottom: 10.5%;
+            left: 29%;
+            background-color: darkorange;
+            height: 75px;
+            width: 75px;
+        }
+        div.dach{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 300px solid transparent;
+            border-right: 300px solid transparent;
+            border-bottom: 200px solid gray;
+            margin: 400px auto 0;
+            top: -30%;
+            left: 12.5%;
+        }
+        div.komin{
+            position: absolute;
+            background-color: lightskyblue;
+            width: 30px;
+            height: 80px;
+            bottom: 62.5%;
+            left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sciana"></div>
+    <div class="okno1"></div>
+    <div class="okno2"></div>
+    <div class="drzwi"></div>
+    <div class="dach"></div>
+    <div class="komin"></div>
+</body>
+</html>
