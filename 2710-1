@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 100px;
+            padding-top: 200px;
+        }
+        div.red{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+        div.blue{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        <div class="blue"></div>
+    </div>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione porro quos in alias veritatis nobis ad, numquam eius excepturi delectus nesciunt magni consequuntur praesentium voluptatem dolores omnis voluptatibus laudantium ab facere, necessitatibus molestiae? Optio, delectus officia tempore explicabo, nobis quasi quaerat officiis assumenda quidem odit harum sapiente ducimus libero iste sunt dolore doloremque, et voluptatibus? Optio, beatae totam at officiis officia praesentium hic debitis accusamus numquam alias dolores quam doloribus quod atque! Possimus doloribus aspernatur voluptatum nam ad dolor mollitia, deserunt eligendi! Voluptatibus laudantium magnam molestias delectus nobis ipsa error voluptates officiis! Aliquam, maxime autem neque numquam culpa quis cupiditate.</p>    
+
+</body>
+</html>
