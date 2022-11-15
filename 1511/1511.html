@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programowanie obiektowe w JS</title>
+    <script src="samochod.js"></script>
+    <script src="komi.js"></script>
+</head>
+<body>
+    <input type="text" name="nazwaKomisu" placeholder="nazwa komisu"/
+    >
+    <button class="btn-wyswietl">Wyswietl dane komisu</button>
+    <script>
+        const auto1= new samochod('Skoda', 'Fabia', 50000, 2018, 5);
+        const auto2= new samochod('Opel', 'Astra', 4500, 2000, 9);
+        const auto3= new samochod('Subaru', 'Forester', 1000, 2005, 14);
+        const div1 = document.createElement('div');
+        document.body.appendChild(div1);
+        const div2 = document.createElement('div');
+        document.body.appendChild(div2);
+        const div3 = document.createElement('div');
+        document.body.appendChild(div3);
+        const komis1 = new komis('Janusz Spolka Autowa')
+        komis1.dodajSamochod(auto1);
+        komis1.dodajSamochod(auto2);
+
+       /* div1.innerHTML = `
+        <p>Dane komisu: </p>
+        <p>Nazwa: ${komis1.nazwa} </p>
+        <p>Samochody: ${komis1.wyswietlSamochody()} </p>
+        `;
+        */
+        const komis2 = new komis('Kopec & Zieba Autos')
+        komis2.dodajSamochod(auto2);
+        komis2.dodajSamochod(auto3);
+
+        const btnWyswietl = document.querySelector('button.btn-wyswietl');
+        const poleKomis = document.queryCommandIndeterm('input[name="nazwaKomisu"]');
+        btnWyswietl.addEventListener('click', () => {
+            if(komis1.nazwa == poleKomis.value){
+                div2.innerHTML = `
+                <p>Dane komisu: </p>
+                <p>Nazwa: ${komis2.nazwa} </p>
+                <p>Samochody: ${komis2.wyswietlSamochody()} </p>
+                `;
+            }
+        });
+       /*  div2.innerHTML = `
+        <p>Dane komisu: </p>
+        <p>Nazwa: ${komis2.nazwa} </p>
+        <p>Samochody: ${komis2.wyswietlSamochody()} </p>
+        `;
+        */
+        /* div1.innerHTML = `
+        <p>Dane samochodu: ${auto1.marka} ${auto1.model} </p>
+        <p>Cena: ${auto1.cena} </p>
+        <p>Rocznik: ${auto1.rocznik} </p>
+        <p>Spalanie: ${auto1.spalanie} na 100km </p>
+        <p>Aktualny wiek samochodu: ${auto1.wiek()}  </p>
+        <p>Koszt przejechania 100km: ${auto1.koszt(6.6)}  </p>
+        `;
+
+        div2.innerHTML = `
+        <p>Dane samochodu: ${auto2.marka} ${auto2.model} </p>
+        <p>Cena: ${auto2.cena} </p>
+        <p>Rocznik: ${auto2.rocznik} </p>
+        <p>Spalanie: ${auto2.spalanie} na 100km </p>
+        <p>Aktualny wiek samochodu: ${auto2.wiek()}  </p>
+        <p>Koszt przejechania 100km: ${auto2.koszt(6.6)}  </p>
+        `;
+
+        div3.innerHTML = `
+        <p>Dane samochodu: ${auto3.marka} ${auto3.model} </p>
+        <p>Cena: ${auto3.cena} </p>
+        <p>Rocznik: ${auto3.rocznik} </p>
+        <p>Spalanie: ${auto3.spalanie} na 100km </p>
+        <p>Aktualny wiek samochodu: ${auto3.wiek()}  </p>
+        <p>Koszt przejechania 100km: ${auto3.koszt(6.6)}  </p>
+        `;
+        */
+       
+    </script>
+</body>
+</html>
