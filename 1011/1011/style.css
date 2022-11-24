@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Saira Condensed', sans-serif;
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;   
+}
+.header{
+    background-color: #29a6dc;
+    color: white;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+.header h3{
+    font-size: 7.5rem;
+    font-weight: 700;
+}
+.header h1{
+    font-size: 3.75rem;
+    font-weight: 700;
+}
+.header h2{
+    font-size: 3.75rem;
+    font-weight: 400;
+}
+.header a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 2.25rem;
+    padding: 10px 15px;
+    margin-top: 50px;
+}
+.header img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+@media (max-width: 600px){
+    .header{
+        text-align: center;
+        padding-bottom: 340px;
+    }
+    .header h3{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    .header h1{
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    .header h2{
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+    .header a{
+        font-size: 12px;
+    } 
+    .header img{
+        height: 300px;
+    }
+    .flex{
+        justify-content: center;
+    }
+}
+    .www{
+       display: flex; 
+       flex-wrap: wrap;
+       justify-content: space-between;
+    }
+    .www h2{
+        flex-basis: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3.75rem;
+        font-weight: 700px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .www-item{
+       flex-basis: 30%; 
+       text-align: center;
+    }
+    .www-item img{
+        width: 100%;
+    }
+    .www-item h4{
+        font-size: 2.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 120%;
+        padding: 30px 0;
+    }
+    @media (max-width:600px){
+        .www h2{
+            font-size: 24px;
+        }
+        .www-item{
+            flex-basis: 100%;
+        }
+        .www-item h4{
+            font-size: 1.125rem;
+        }
+    }
+    .motto{
+        background-image: url(motto.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .motto-wrapper{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 100px 0;
+    }
+    .motto-wrapper div{
+        width: 40%;
+        margin: 0 auto;
+        align-items: center;
+        color: white
+    }
+
