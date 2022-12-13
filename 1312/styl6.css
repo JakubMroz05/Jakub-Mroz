@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Georgia, serif;
+}
+.blok-lewy{
+    width: 30%;
+    height: 600px;
+    background-color: maroon;
+    color: white;
+}
+.blok-prawy{
+    width: 70%;
+    height: 600px;
+    background-color: maroon;
+    color: white;
+    overflow-y: auto;
+}
+.stopka{
+    width: 100%;
+    background-color: dimgray;
+    color: white;
+
+}
+.blok-prawy > div{
+    display: flex;
+}
+
+.blok-prawy > p{
+    padding: 10px;
+}
