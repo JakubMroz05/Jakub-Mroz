@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okienko popup</title>
+    <style>
+        .popup-container{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .popup{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 70%;
+            background-color: white;
+
+        }
+        .show{
+            display: block;
+        }
+        .popup header{
+            background-color: orange;
+            height: 80px;
+        }
+        .popup span{
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            font-family: Arial;
+            font-size: 32px;
+            background-color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <button>Złóż zamówienie</button>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias, nemo accusantium dolore dolor quibusdam assumenda laborum soluta, esse, eligendi facilis vel. Perspiciatis, magni. Earum provident aperiam, corporis dolorum hic sapiente dolor ipsa maiores labore enim temporibus beatae deserunt autem odit repellat ad alias aspernatur. Doloremque corrupti voluptas totam distinctio?</p>
+    <div class="popup-container">
+        <div class="popup">
+            <span>X</span>
+            <header></header>
+            <footer></footer>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('button');
+        const popup = document.querySelector('.popup-container');
+        const x = document.querySelector('.popup span')
+        btn.addEventListener('click', function(){
+            popup.classList.add('show');
+        });
+        x.addEventListener('click', function(){
+            popup.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
