@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.baner{
+    background-color: tomato;
+    padding: 10px;
+    color: white;
+    font-family: Tahoma;
+    text-align: center;
+}
+.blok-glowny{
+    background-color: seashell;
+    height: 500px;
+    text-align: center;
+    overflow: scroll;
+}
+.stopka{
+    background-color: tomato;
+    color: white;
+    height: 160px;
+    display: flex;
+}
+.stopka1{
+    width: 25%;
+}
+.stopka2{
+    width: 25%;
+}
+.stopka3{
+    width: 25%;
+}    
+.stopka4{
+    width: 25%;
+}
+.anna{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: 40px;
+    display: flex;
+}
+.anna1{
+    font-size: 150%;
+}
+.ewa{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: 40px;
+    display: flex;
+}
+.ewa1{
+    font-size: 150%;
+}
+.janek{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: 40px;
+    display: flex;
+}
+.janek1{
+        font-size: 150%;
+}
+.john{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: 40px;
+    display: flex;
+}
+.john1{
+    font-size: 150%;
+}
+.judy{
+    background-color: white;
+    color: dimgray;
+    width: 60%;
+    height: 220px;
+    margin: 40px;
+    display: flex;
+}
+.judy1{
+    font-size: 150%;
+}
