@@ -1,0 +1,10 @@
+div.uzytkownicy{
+    display: flex;
+    flex-wrap: wrap;
+}
+div.user {
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
